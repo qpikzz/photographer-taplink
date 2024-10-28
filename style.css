@@ -24,7 +24,6 @@ body {
     background-repeat: repeat-y;
     background-position: top center;
     background-size: 100vw auto;
-    margin: 0;
     overflow-x: hidden;
 }
 
@@ -66,8 +65,8 @@ nav {
 
 }
 
-nav a {
-    margin-inline: 0.4rem;
+nav a, header div a {
+    margin-inline: 0.6rem;
     color: #E7E7E7;
     text-decoration: none;
     font-family: roboto regular;
@@ -75,13 +74,19 @@ nav a {
     transition: all 0.2s ease;
 }
 
-nav a:hover {
+nav a:hover, header div a:hover {
     color: #A7A7A9;
 }
 
-.location {
+header div {
     display: flex;
     align-items: center;
+}
+
+.location {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 0.6rem;
 }
 
 .location img {
@@ -99,7 +104,7 @@ nav a:hover {
 
 .hello {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -111,7 +116,7 @@ nav a:hover {
     content: "";
     position: absolute;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-color: rgba(18, 18, 18, 0.6);
 }
 
@@ -119,7 +124,7 @@ nav a:hover {
     content: "";
     position: absolute;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-color: rgba(18, 18, 18, 0.6);
 }
 
@@ -159,12 +164,77 @@ nav a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     transition: opacity 4s ease-in-out;
 }
+
 .hidden {
     opacity: 0;
+}
+
+.about {
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    padding: 5vh 5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.about img {
+    width: 25rem;
+    height: 25rem;
+    margin-right: 10rem;
+}
+
+.about p {
+    font-size: 2rem;
+    font-family: roboto light;
+}
+
+hr {
+    color: #A7A7A9;
+    width: 80%;
+
+}
+
+.portfolio {
+    padding: 5vh 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.female-portait, .black-n-white-portait, .others {
+    width: 30%;
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.female-portait img,  .black-n-white-portait img, .others img {
+    width: 100%;
+    height: auto;
+    margin-block: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-family: roboto light;
+    font-weight: 100;
+}
+
+body a {
+    color: #E7E7E7;
+    font-family: roboto regular;
+    margin-left: 5vw;
+    text-decoration: none;
+}
+
+body a:hover {
+    color: #A7A7A9;
 }
