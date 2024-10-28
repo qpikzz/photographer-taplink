@@ -1,0 +1,170 @@
+@font-face {
+    font-family: roboto regular;
+    src: url(fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: roboto light;
+    src: url(fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: poiretOne;
+    src: url(fonts/PoiretOne-Regular.ttf);
+}
+@font-face {
+    font-family: leonovSP;
+    src: url(fonts/LeonovSP.otf);
+}
+
+body {
+    background-color: #121212;
+    color: #E7E7E7;
+    padding: 0px;
+    margin: 0px;
+    background-image: url(images/background.jpg);
+    background-repeat: repeat-y;
+    background-position: top center;
+    background-size: 100vw auto;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    z-index: 19;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 1rem 1rem;
+    border-bottom: 0.1rem solid #E7E7E7;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(18, 18, 18, 0.3);
+    backdrop-filter: blur(0.2rem);
+}
+
+.logo {
+    color:#E7E7E7;
+    font-family: poiretOne;
+    font-size: 2rem;
+    margin: 0px;
+    display: inline;
+    transition: all 0.2s ease;
+}
+
+.logo:hover {
+    cursor: default;
+    background: linear-gradient(to right, #F55233, #F5BB00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+nav {
+    display: inline;
+
+}
+
+nav a {
+    margin-inline: 0.4rem;
+    color: #E7E7E7;
+    text-decoration: none;
+    font-family: roboto regular;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    color: #A7A7A9;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+}
+
+.location img {
+    width: 1rem;
+    height: auto;
+    display: inline;
+}
+
+.location p {
+    font-size: 1rem;
+    display: inline;
+    font-family: roboto regular;
+    margin-left: 0.5rem;
+}
+
+.hello {
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: all 2s ease;
+    border-radius: 1rem;
+}
+
+.background2::before {
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.6);
+}
+
+.background1::before {
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.6);
+}
+
+.hello-card {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: hello-move 1s linear;
+}
+
+.hello-card p {
+    margin: 0.5rem 0;
+    font-family: roboto light;
+}
+
+.hello-card:hover {
+    cursor: default;
+}
+
+#hello-title {
+    font-size: 2.5rem;
+}
+
+@keyframes hello-move {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.background1, .background2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 4s ease-in-out;
+}
+.hidden {
+    opacity: 0;
+}
