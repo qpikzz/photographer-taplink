@@ -213,7 +213,7 @@ hr {
     justify-content: space-between;
 }
 
-.female-portait, .black-n-white-portait, .others {
+.female-portrait, .black-n-white-portrait, .others {
     width: 30%;
     display: inline-flex;
     justify-content: start;
@@ -221,10 +221,19 @@ hr {
     flex-direction: column;
 }
 
-.female-portait img,  .black-n-white-portait img, .others img {
-    width: 100%;
-    height: auto;
+.female-portrait img,  .black-n-white-portrait img, .others img {
+    object-fit: cover;
     margin-block: 1rem;
+}
+
+.first {
+    width: 16rem;
+    height: 25rem;
+}
+
+.second {
+    width: 16rem;
+    height: 16rem;
 }
 
 h2 {
